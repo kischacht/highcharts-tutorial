@@ -1,6 +1,16 @@
 #Einführung in Highcharts
 
-Einleitungssatz blablub.
+Einleitungssatz blablub. Kurze Erklärung was Highcharts ist.
+
+Dieses repository enthält:
+
+* README.md: Der Text, den ihr gerade lest. Führt euch durch das Tutorial.
+* application.js: Die Datei, in der ihr eure eigene Grafik bauen könnt.
+* application_finished.js: Die fertige Grafik zum Vergleich. Aber nicht schummeln, außer im Notfall!
+* data.csv: Der Beispieldatensatz, den wir für diese Übung verwenden
+* index.html: Enthält die Grundstruktur der Website, auf der ihr eure Highcharts-Grafik einbindet.
+
+Dieses Tutorial erklärt die Grundlagen von Highcharts. Es gibt aber noch viel mehr zu entdecken. Zögert also nicht, eure eigene Grafik anzupassen, wie ihr wollt, andere Daten zu verwenden oder zusätzliche Inhalte in eurer index.html hinzuzufügen.
 
 ##Die Leinwand: Grundstruktur einer Website
 
@@ -39,9 +49,14 @@ Die folgenden Zeilen müssen in der index.html vermerkt werden, damit alle Resso
 <script src='http://code.highcharts.com/modules/exporting.src.js' type='text/javascript'></script>
 <script type='text/javascript' src="application.js"></script>
 ````
-
-Die ersten drei sind URLs, die auf die Highcharts-Bibliothek und ihre Dependencies verweisen. Das letzte ist dann die Datei, in der wir unsere ganz eigene Highcharts-Grafik basteln. Die wollen wir nun auch befüllen.
+Die ersten drei sind URLs, die auf die Highcharts-Bibliothek und ihre Dependencies verweisen. Das letzte ist dann die Datei, in der wir unsere ganz eigene Highcharts-Grafik basteln. Wichtig ist, dass diese Datei als letztes geladen wird, denn sonst werden die Funktionen aus der Bibliothek nicht erkannt, die wir jetzt für unsere Grafik verwenden wollen.
 
 ## Die Grafik: Highcharts in Action
+
+Einer der großen Vorteile von Highcharts ist, dass es sehr gut dokumentiert ist. Hier ein paar nützliche Links, for future reference:
+
+* [Highcharts Documentation](http://www.highcharts.com/docs): Einführung in den Aufbau von Highcharts Grafiken
+* [Highcharts Demos](http://www.highcharts.com/demo/): Beispiele mit nützlichen JSFiddles
+* [Highcharts API Reference](): Ausführliche Dokumentation aller Optionen mit Beispielen
 
 

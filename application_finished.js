@@ -1,19 +1,22 @@
+//Beispiel von: http://www.highcharts.com/demo/combo-dual-axes
+
+
 $(function () {
     $('#container').highcharts({
         chart: {
             zoomType: 'xy'
         },
         title: {
-            text: 'awökdjfesvcBysdc erlin'
+            text: 'Durchschnittstemperatur und -niederschlag pro Monat in Berlin'
         },
         subtitle: {
             text: 'Quelle: WorldClimate.com'
         },
-        xAxis: [{
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        xAxis: {
+            categories: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
+                'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
             crosshair: true
-        }],
+        },
         yAxis: [{ // Primary yAxis
             labels: {
                 format: '{value}°C',
@@ -43,16 +46,7 @@ $(function () {
             opposite: true
         }],
         tooltip: {
-          formatter: function () {
-                var s = '<b>' + this.x + '</b>';
 
-                $.each(this.points, function () {
-                    s += '<br/>' + this.series.name + ': ' +
-                        this.y + 'm';
-                });
-
-                return s;
-            },
             shared: true
         },
         legend: {
@@ -62,7 +56,6 @@ $(function () {
             verticalAlign: 'top',
             y: 100,
             floating: true,
-            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
         },
         series: [{
             name: 'Niederschlag',
