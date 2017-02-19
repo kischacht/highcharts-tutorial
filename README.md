@@ -51,6 +51,14 @@ Damit die Funktionen von Highcharts überhaupt verwendet werden können, muss di
 ````
 Die ersten drei sind URLs, die auf die Highcharts-Bibliothek und ihre Dependencies verweisen. Das letzte ist dann die lokale Script-Datei, in der wir unsere ganz eigene Highcharts-Grafik basteln. Wichtig ist, dass diese Datei als letztes geladen wird, denn sonst werden die Funktionen aus der Bibliothek nicht erkannt, die wir jetzt für unsere Grafik verwenden wollen.
 
+Im `<body>` der *index.html* muss nun noch eine Zeile eingefügt werden:
+
+````html
+<div id = 'container'></div>
+````
+
+Dieses `<div>`-Element dient als Platzhalter, an den später die Grafik gebunden wird.
+
 
 ##Die Grafik: Highcharts in Action
 
@@ -63,7 +71,7 @@ Einer der großen Vorteile von Highcharts ist, dass es sehr gut dokumentiert ist
 Unsere Grafik wollen wir in die Datei application.js schreiben.
 Sie enthält bereits ein Grundgerüst, aber der Inhalt fehlt.
 
-Highcharts-Grafiken können an ein Element auf der Website gebunden werden. Dort werden sie dann angezeigt. In diesem Fall ist es ein <div> mit der id "container", wie in der index.html vermerkt.
+Highcharts-Grafiken können an ein Element auf der Website gebunden werden. Dort werden sie dann angezeigt. In diesem Fall ist es das `<div>` mit der id "container", Das wir eben in der *index.html* eingefügt haben. Die id kann natürlich auch anders lauten; Hauptsache, sie ist die gleiche, die in *application.js* auch verwendet wird.
 Es gibt mehrere Methoden, wie man die Grafik an dieses div hängen kann. Wir machen es mit diesem jQuery-Code:
 
 ````javascript
