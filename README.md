@@ -10,13 +10,13 @@ Dieses repository enthält:
 * data.csv: Der Beispieldatensatz, den wir für diese Übung verwenden
 * index.html: Enthält die Grundstruktur der Website, auf der ihr eure Highcharts-Grafik einbindet.
 
-Dieses Tutorial erklärt die Grundlagen von Highcharts. Es gibt aber noch viel mehr zu entdecken. Zögert also nicht, eure eigene Grafik anzupassen, wie ihr wollt, andere Daten zu verwenden oder zusätzliche Inhalte in eurer index.html hinzuzufügen.
+Dieses Tutorial erklärt die Grundlagen von Highcharts. Es gibt aber noch viel mehr zu entdecken. Zögert also nicht, eure Grafiken anzupassen, wie ihr wollt, andere Daten zu verwenden oder zusätzliche Inhalte in eurer index.html hinzuzufügen.
 
 ##Die Leinwand: Grundstruktur einer Website
 
 Bevor wir mit den interaktiven Grafiken loslegen, brauchen wir erstmal eine Leinwand, auf der wir sie basteln können: Die Website, auf der die Grafik eingebunden wird.
 
-Websites bestehen meist vor allem aus drei Komponenten:
+Websites bestehen vor allem aus drei Komponenten:
 
 * HTML: xx erklärung in einem Satz, was das ist
 * CSS: xx
@@ -58,5 +58,25 @@ Einer der großen Vorteile von Highcharts ist, dass es sehr gut dokumentiert ist
 * [Highcharts Documentation](http://www.highcharts.com/docs): Einführung in den Aufbau von Highcharts Grafiken
 * [Highcharts Demos](http://www.highcharts.com/demo/): Beispiele mit nützlichen JSFiddles
 * [Highcharts API Reference](): Ausführliche Dokumentation aller Optionen mit Beispielen
+
+Unsere Grafik wollen wir in die Datei application.js schreiben.
+Sie enthält bereits ein Grundgerüst, aber der Inhalt fehlt.
+
+Highcharts-Grafiken können an ein Element auf der Website gebunden werden. Dort werden sie dann angezeigt. In diesem Fall ist es ein <div> mit der id "container", wie in der index.html vermerkt.
+Es gibt mehrere Methoden, wie man die Grafik an dieses div hängen kann. Wir machen es mit diesem jQuery-Code:
+
+````javascript
+$(function () {
+    $('#container').highcharts({
+
+    });
+});
+````
+
+Innerhalb dieser Funktion können wir unsere Grafik bauen, wie wir wollen. Highcharts tut das über ein JSON-Objekt mit verschiedenen Komponenten, die das Aussehen und das Verhalten der Grafik steuern: Die Datenreihen, die Achsen, das Tooltip, die Legende, die Zoom-Einstellungen und vieles mehr. Das macht die Arbeit recht übersichtlich. Gehen wir die grundlegenden Elemente einmal durch:
+
+###series
+
+Das 
 
 
