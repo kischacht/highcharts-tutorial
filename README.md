@@ -92,7 +92,7 @@ Die Attribute sind relativ selbsterklärend: `name` weist der Datenreihe eine Be
 
 Sobald die Daten geladen und der `type` festgelegt ist, kann Highcharts bereits eine Grafik darstellen. Alle anderen Elemente sind dazu da, das Aussehen und das Verhalten dieser Grafik so anzupassen, wie ihr es euch vorstellt. So lassen sich etwa die Achsen verändern.
 
-#xAxis und yAxis
+###xAxis und yAxis
 
 Die Daten in unserem Beispiel sind Monatsdurchschnitte. Also liegt es ja nahe, die x-Achse auch mit Monaten zu beschriften. Das lässt sich im Element `xAxis` über das Attribut `categories`tun.
 
@@ -124,5 +124,5 @@ Sowohl für die x- als auch für die y-Achse gibt es noch viele weitere Einstell
 
 ###Weitere
 
-In der [Highcharts API Reference](http://api.highcharts.com/highcharts), die weiter oben bereits verlinkt wurde, findet ihr eine ausführliche Übersicht über alle möglichen Attribute. In diesem Tutorial können wir noch eine Grafikbeschriftung mit `title` und `subtitle` hinzufügen, die Legende (`legend`) und das Tooltip (`tooltip`) anpassen sowie den Zoom-Typ im `chart` Element einstellen, dass allgemeine Standardeinstellungen für die Grafik festlegt. Kopiert einfach das entsprechende Element aus dem auskommentierten Abschnitt in *application.js* an die entsprechende Stelle im Code und seht nach, was passiert. Was passiert, wenn ihr einzelne Zeilen auskommentiert? Oder neue hinzufügt? Probiert es aus!
+In der [Highcharts API Reference](http://api.highcharts.com/highcharts), die weiter oben bereits verlinkt wurde, findet ihr eine ausführliche Übersicht über alle möglichen Attribute. In diesem Tutorial können wir noch eine Grafikbeschriftung mit `title` und `subtitle` hinzufügen, die Legende (`legend`) und das Tooltip (`tooltip`) anpassen sowie den Zoom-Typ im `chart` Element einstellen, dass allgemeine Standardeinstellungen für die Grafik festlegt. Kopiert einfach das entsprechende Element aus dem auskommentierten Abschnitt in *application.js* an die entsprechende Stelle im Code und seht nach, was passiert. Was geschieht, wenn ihr einzelne Zeilen auskommentiert? Oder neue hinzufügt? Probiert es aus!
 
