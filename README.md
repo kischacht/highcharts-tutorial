@@ -51,13 +51,13 @@ Die folgenden Zeilen müssen in der index.html vermerkt werden, damit alle Resso
 ````
 Die ersten drei sind URLs, die auf die Highcharts-Bibliothek und ihre Dependencies verweisen. Das letzte ist dann die Datei, in der wir unsere ganz eigene Highcharts-Grafik basteln. Wichtig ist, dass diese Datei als letztes geladen wird, denn sonst werden die Funktionen aus der Bibliothek nicht erkannt, die wir jetzt für unsere Grafik verwenden wollen.
 
-## Die Grafik: Highcharts in Action
+##Die Grafik: Highcharts in Action
 
 Einer der großen Vorteile von Highcharts ist, dass es sehr gut dokumentiert ist. Hier ein paar nützliche Links, for future reference:
 
 * [Highcharts Documentation](http://www.highcharts.com/docs): Einführung in den Aufbau von Highcharts Grafiken
 * [Highcharts Demos](http://www.highcharts.com/demo/): Beispiele mit nützlichen JSFiddles
-* [Highcharts API Reference](): Ausführliche Dokumentation aller Optionen mit Beispielen
+* [Highcharts API Reference](http://api.highcharts.com/highcharts): Ausführliche Dokumentation aller Optionen mit Beispielen
 
 Unsere Grafik wollen wir in die Datei application.js schreiben.
 Sie enthält bereits ein Grundgerüst, aber der Inhalt fehlt.
@@ -77,6 +77,51 @@ Innerhalb dieser Funktion können wir unsere Grafik bauen, wie wir wollen. Highc
 
 ###series
 
-Das 
+Ohne Daten funktioniert keine Grafik. Über das Element `series` können Datenreihen eingelesen werden.
 
+````javascript
+series: {
+	name: 'Niederschlag',
+	type: 'column',
+	data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1],
+}
+````
+
+Die Attribute sind relativ selbsterklärend: `name` weist der Datenreihe eine Beschriftung zu, `type` bestimmt die Art der Visualisierung (hier zum Beispiel ein Balkendiagramm) und `data` lädt die eigentlichen Daten. Das können Arrays mit einem Datenvektor sein, wie hier, oder auch komplexere Arrays oder JSON-Objekte. Sie können, wie hier, explizit in den Code geschrieben werden, aber auch vorher als Variable deklariert werden und/oder aus externen Dateien wie CSVs oder Google Spreadsheets geladen werden.
+
+Sobald die Daten geladen und der `type` festgelegt ist, kann Highcharts bereits eine Grafik darstellen. Alle anderen Elemente sind dazu da, das Aussehen und das Verhalten dieser Grafik so anzupassen, wie ihr es euch vorstellt. So lassen sich etwa die Achsen verändern.
+
+#xAxis und yAxis
+
+Die Daten in unserem Beispiel sind Monatsdurchschnitte. Also liegt es ja nahe, die x-Achse auch mit Monaten zu beschriften. Das lässt sich im Element `xAxis` über das Attribut `categories`tun.
+
+````javascript
+xAxis: {
+	categories: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
+             'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
+	crosshair: true
+}
+````
+
+`crosshair` ist ein nützliches kleines Attribut. Es sorgt dafür, dass der Datenpunkt, über dem man mit dem Cursor hovert, farblich hinterlegt wird.
+
+````javascript
+yAxis: {
+	labels: {
+		format: '{value}°C',
+        },
+        title: {
+                text: 'Temperatur',
+                style: {
+                      color: 'black',
+                }
+        }
+}
+````
+
+Sowohl für die x- als auch für die y-Achse gibt es noch viele weitere Einstellungen. Über `title` etwa lässt sich die Achsenbeschriftung und sogar deren CSS-style anpassen, über `labels.format` lässt sich eine Maßeinheit definieren.
+
+###Weitere
+
+In der [Highcharts API Reference](http://api.highcharts.com/highcharts), die weiter oben bereits verlinkt wurde, findet ihr eine ausführliche Übersicht über alle möglichen Attribute. In diesem Tutorial können wir noch eine Grafikbeschriftung mit `title` und `subtitle` hinzufügen, die Legende (`legend`) und das Tooltip (`tooltip`) anpassen sowie den Zoom-Typ im `chart` Element einstellen, dass allgemeine Standardeinstellungen für die Grafik festlegt. Kopiert einfach das entsprechende Element aus dem auskommentierten Abschnitt in *application.js* an die entsprechende Stelle im Code und seht nach, was passiert. Was passiert, wenn ihr einzelne Zeilen auskommentiert? Oder neue hinzufügt? Probiert es aus!
 

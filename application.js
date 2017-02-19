@@ -10,9 +10,7 @@ $(function () {
 
         },
         xAxis: {
-            categories: ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
-                'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'],
-            crosshair: true
+
         },
         yAxis: {
 
@@ -23,19 +21,9 @@ $(function () {
         legend: {
 
         },
-        series: [
-        {
-            // erste Datenreihe
-            name: 'Niederschlag',
-            type: 'column',
-            //yAxis: 1,
-            data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1],
-            tooltip: {
-                valueSuffix: ' mm'
-            }
+        series: {
+            
         }
-
-        ]
     });
 });
 
