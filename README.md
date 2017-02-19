@@ -1,14 +1,14 @@
 #Einführung in Highcharts
 
-Einleitungssatz blablub. Kurze Erklärung was Highcharts ist.
+Highcharts ist eine praktische Javascript-Bibliothek, mit der sich relativ einfach interaktive Grafiken erstellen lassen, die stark indi
 
 Dieses repository enthält:
 
-* README.md: Der Text, den ihr gerade lest. Führt euch durch das Tutorial.
-* application.js: Die Datei, in der ihr eure eigene Grafik bauen könnt.
-* application_finished.js: Die fertige Grafik zum Vergleich. Aber nicht schummeln, außer im Notfall!
-* data.csv: Der Beispieldatensatz, den wir für diese Übung verwenden
-* index.html: Enthält die Grundstruktur der Website, auf der ihr eure Highcharts-Grafik einbindet.
+* *README.md*: Der Text, den ihr gerade lest. Führt euch durch das Tutorial.
+* *application.js*: Die Datei, in der ihr eure eigene Grafik bauen könnt.
+* *application_finished.js*: Die fertige Grafik zum Vergleich. Aber nicht schummeln, außer im Notfall!
+* *data.csv*: Der Beispieldatensatz, den wir für diese Übung verwenden
+* *index.html*: Enthält die Grundstruktur der Website, auf der ihr eure Highcharts-Grafik einbindet.
 
 Dieses Tutorial erklärt die Grundlagen von Highcharts. Es gibt aber noch viel mehr zu entdecken. Zögert also nicht, eure Grafiken anzupassen, wie ihr wollt, andere Daten zu verwenden oder zusätzliche Inhalte in eurer index.html hinzuzufügen.
 
@@ -18,30 +18,30 @@ Bevor wir mit den interaktiven Grafiken loslegen, brauchen wir erstmal eine Lein
 
 Websites bestehen vor allem aus drei Komponenten:
 
-* HTML: xx erklärung in einem Satz, was das ist
-* CSS: xx
-* JavaScript: xx. Auch Highcharts-Grafiken werden in JavaScript gecoded.
+* HTML: *HyperText Markup Language*. Bestimmt die grundlegende Struktur von Websites.
+* CSS: *Cascading Style Sheets*. Bestimmt das Aussehen von Grafiken
+* JavaScript: Scriptsprache, die das Verhalten von Websites bestimmt – also alles, was interaktiv ist. CSS oder HTML können ebenfalls über JavaScript manipuliert werden. Auch Highcharts-Grafiken werden in JavaScript gecoded.
 
-All diese Komponenten laufen zusammen in der index.html Datei. Ihre grundlegende Struktur sieht so aus:
+All diese Komponenten laufen zusammen in der *index.html* Datei. Ihre grundlegende Struktur sieht so aus:
 
 ````html
 <!doctype HTML>
 <html>
   <head>
-    ...
+
   </head>
   <body>
-    ...
+
   </body>
 </html>
 ````
 
-xx Erklärung, was das ist.
-Das ist im Prinzip schon eine fertige Website. Sie hat im jetzigen Zustand allerdings noch keinen Inhalt. Das wollen wir ändern.
+Die Worte in den spitzen Klammern sind *Tags*. Sie beschreiben die Art des Elements, was zwischen dem jeweiligen *<start tag>* und dem *</end tag>* steht.
+Im `<head>` des HTML-Dokumentes können Meta-Informationen vermerkt und externe Ressourcen eingebunden werden. Er produziert aber keinen sichtbaren Inhalt auf der Seite. Der wird im `<body>` hinzugefügt.
 
-Um es übersichtlich zu halten, schreiben wir in diesem Fall den JavaScript Code nicht direkt in die index.html, sondern in eine eigene .js-Datei.
+Der Code oben ist im Prinzip schon eine fertige Website. Sie hat im jetzigen Zustand allerdings noch keinen Inhalt. Das wollen wir im nächsten Schritt ändern.
 
-Die folgenden Zeilen müssen in der index.html vermerkt werden, damit alle Ressourcen eingebunden werden:
+Damit die Funktionen von Highcharts überhaupt verwendet werden können, muss die entsprechende Bibliothek erst eingebunden werden. Dazu fügen wir folgende Zeilen hinzu, zum Beispiel im `<head>`:
 
 ````html
 <script src='http://code.jquery.com/jquery-1.9.1.min.js' type='text/javascript'></script>
@@ -49,11 +49,12 @@ Die folgenden Zeilen müssen in der index.html vermerkt werden, damit alle Resso
 <script src='http://code.highcharts.com/modules/exporting.src.js' type='text/javascript'></script>
 <script type='text/javascript' src="application.js"></script>
 ````
-Die ersten drei sind URLs, die auf die Highcharts-Bibliothek und ihre Dependencies verweisen. Das letzte ist dann die Datei, in der wir unsere ganz eigene Highcharts-Grafik basteln. Wichtig ist, dass diese Datei als letztes geladen wird, denn sonst werden die Funktionen aus der Bibliothek nicht erkannt, die wir jetzt für unsere Grafik verwenden wollen.
+Die ersten drei sind URLs, die auf die Highcharts-Bibliothek und ihre Dependencies verweisen. Das letzte ist dann die lokale Script-Datei, in der wir unsere ganz eigene Highcharts-Grafik basteln. Wichtig ist, dass diese Datei als letztes geladen wird, denn sonst werden die Funktionen aus der Bibliothek nicht erkannt, die wir jetzt für unsere Grafik verwenden wollen.
+
 
 ##Die Grafik: Highcharts in Action
 
-Einer der großen Vorteile von Highcharts ist, dass es sehr gut dokumentiert ist. Hier ein paar nützliche Links, for future reference:
+Einer der großen Vorteile von Highcharts ist, dass es sehr gut dokumentiert ist. Hier ein paar nützliche Links dazu:
 
 * [Highcharts Documentation](http://www.highcharts.com/docs): Einführung in den Aufbau von Highcharts Grafiken
 * [Highcharts Demos](http://www.highcharts.com/demo/): Beispiele mit nützlichen JSFiddles
