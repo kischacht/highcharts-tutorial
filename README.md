@@ -1,6 +1,6 @@
 #Einführung in Highcharts
 
-Highcharts ist eine praktische Javascript-Bibliothek, mit der sich relativ einfach interaktive Grafiken erstellen lassen, die stark indi
+Highcharts ist eine praktische Javascript-Bibliothek, mit der sich relativ einfach interaktive Grafiken erstellen lassen, die stark individualisierbar sind. Für den nichtkommerziellen Gebrauch ist Highcharts kostenlos, für den kommerziellen Gebrauch sind die Lizenzen recht teuer. Aber Forschungsarbeit, Uniarbeiten oder Non-Profit-Organisationen fallen unter den nichtkommerziellen Gebrauch.
 
 Dieses repository enthält:
 
@@ -19,7 +19,7 @@ Bevor wir mit den interaktiven Grafiken loslegen, brauchen wir erstmal eine Lein
 Websites bestehen vor allem aus drei Komponenten:
 
 * HTML: *HyperText Markup Language*. Bestimmt die grundlegende Struktur von Websites.
-* CSS: *Cascading Style Sheets*. Bestimmt das Aussehen von Grafiken
+* CSS: *Cascading Style Sheets*. Bestimmt das Aussehen von Websites.
 * JavaScript: Scriptsprache, die das Verhalten von Websites bestimmt – also alles, was interaktiv ist. CSS oder HTML können ebenfalls über JavaScript manipuliert werden. Auch Highcharts-Grafiken werden in JavaScript gecoded.
 
 All diese Komponenten laufen zusammen in der *index.html* Datei. Ihre grundlegende Struktur sieht so aus:
@@ -36,10 +36,10 @@ All diese Komponenten laufen zusammen in der *index.html* Datei. Ihre grundlegen
 </html>
 ````
 
-Die Worte in den spitzen Klammern sind *Tags*. Sie beschreiben die Art des Elements, was zwischen dem jeweiligen *<start tag>* und dem *</end tag>* steht.
+Die Worte in den spitzen Klammern sind *Tags*. Sie beschreiben die Art des Elements, was zwischen dem jeweiligen *\<start tag\>* und dem *\</end tag\>* steht.
 Im `<head>` des HTML-Dokumentes können Meta-Informationen vermerkt und externe Ressourcen eingebunden werden. Er produziert aber keinen sichtbaren Inhalt auf der Seite. Der wird im `<body>` hinzugefügt.
 
-Der Code oben ist im Prinzip schon eine fertige Website. Sie hat im jetzigen Zustand allerdings noch keinen Inhalt. Das wollen wir im nächsten Schritt ändern.
+Der Code oben ist im Prinzip schon eine funktionierende Website. Sie hat im jetzigen Zustand allerdings noch keinen Inhalt. Das wollen wir im nächsten Schritt ändern.
 
 Damit die Funktionen von Highcharts überhaupt verwendet werden können, muss die entsprechende Bibliothek erst eingebunden werden. Dazu fügen wir folgende Zeilen hinzu, zum Beispiel im `<head>`:
 
@@ -64,7 +64,7 @@ Dieses `<div>`-Element dient als Platzhalter, an den später die Grafik gebunden
 
 Einer der großen Vorteile von Highcharts ist, dass es sehr gut dokumentiert ist. Hier ein paar nützliche Links dazu:
 
-* [Highcharts Documentation](http://www.highcharts.com/docs): Einführung in den Aufbau von Highcharts Grafiken
+* <a href= "http://www.highcharts.com/docs" target="_blank">Highcharts Documentation</a>: Einführung in den Aufbau von Highcharts Grafiken
 * [Highcharts Demos](http://www.highcharts.com/demo/): Beispiele mit nützlichen JSFiddles
 * [Highcharts API Reference](http://api.highcharts.com/highcharts): Ausführliche Dokumentation aller Optionen mit Beispielen
 
